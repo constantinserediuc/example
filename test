@@ -1,0 +1,10 @@
+Résultat1 = sOuvre(1, 2000, 2000) // Ouverture de COM1
+SI Résultat1 = Vrai ALORS
+        // Paramètrage Com1 : Taux 9600, Parité paire, 
+        // 8 bits de données, 1 bit de stop
+        sFixeParamètre(1, 9600, 1, 8, 0) // Paramètrage de COM1 
+        // Suite traitement...
+        sFerme(1) // Fermeture de COM1
+SINON
+        Erreur("Erreur d'ouverture de COM1")
+FIN
